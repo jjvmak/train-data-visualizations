@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c4caa07-bf1e-484b-a34a-8db02eb9282c" name="Default Changelist" comment="">
+    <list default="true" id="9c4caa07-bf1e-484b-a34a-8db02eb9282c" name="Default Changelist" comment="no nyt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,7 +11,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Joonas Mäkinen &lt;makinen.jns@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1WRA2Zlu45yl2xLI3Dt4lyA5cmO" />
@@ -91,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579101826982</updated>
-      <workItem from="1579101834263" duration="1003000" />
+      <workItem from="1579101834263" duration="1264000" />
     </task>
     <task id="LOCAL−00001" summary="Testing venv and commit from PyCharm.">
       <created>1579102245439</created>
@@ -105,7 +112,25 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1579102470658</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="fixup! Testing venv and commit from PyCharm.">
+      <created>1579102859389</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1579102859389</updated>
+    </task>
+    <task id="LOCAL−00004" summary="fixup! Testing venv and commit from PyCharm.">
+      <created>1579102994208</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1579102994208</updated>
+    </task>
+    <task id="LOCAL−00005" summary="no nyt">
+      <created>1579103043000</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1579103043000</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,7 +141,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -143,22 +180,21 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Testing venv and commit from PyCharm." />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing venv and commit from PyCharm." />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="fixup! Testing venv and commit from PyCharm." />
+    <MESSAGE value="no nyt" />
+    <option name="LAST_COMMIT_MESSAGE" value="no nyt" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1579102470146">
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1579103095750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1579102470146" />
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1579102829301">
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1579103095750" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1579102928149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579102829301" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579102928149" />
     <state x="739" y="275" key="FileChooserDialogImpl" timestamp="1579102018328">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -167,6 +203,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579102595476" />
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1579103048176">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1579103048176" />
+    <state x="714" y="255" key="VcsDiffUtil.ChangesDialog" timestamp="1579102916048">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="714" y="255" key="VcsDiffUtil.ChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579102916048" />
     <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579102838046">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
