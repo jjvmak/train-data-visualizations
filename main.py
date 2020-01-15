@@ -1,5 +1,7 @@
-import numpy as np
+from dataloader import Dataloader
+import pandas as pd
 
-hi_this_is_np_array = np.array([1, 3, 5])
-print(hi_this_is_np_array)
-print('everything seems to be in order')
+
+class Main:
+    if __name__ == "__main__":
+        data_loader = Dataloader()
