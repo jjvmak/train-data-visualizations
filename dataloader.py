@@ -10,24 +10,29 @@ class Dataloader:
     LATENESS_PATH = 'data/lateness.pkl'
 
     def get_and_save_stations(self):
-        df = pd.DataFrame(columns=['stationName', 'stationShortCode', 'longitude', 'latitude', 'lateness'])
+        print('get and save stations')
+        df = pd.DataFrame(columns=['stationName', 'stationShortCode', 'latitude', 'longitude', 'lateness'])
         response = requests.get(self.STATIONS_URL)
         stations = response.json()
         for s in stations:
             df = df.append({'stationName': s['stationName'],
                             'stationShortCode': s['stationShortCode'],
-                            'longitude': s['longitude'],
-                            'latitude': s['latitude']},
+                            'latitude': s['latitude'],
+                            'longitude': s['longitude']},
                            ignore_index=True)
 
         df.to_pickle(self.STATIONS_PATH)
+        print('done!')
         return df
 
     def load_stations(self):
+        print('load stations')
         df = pd.read_pickle(self.STATIONS_PATH)
+        print('done')
         return df
 
     def calculate_lateness_of_station(self, station_code):
+        print('calculate lateness for: ' + station_code)
         response = requests.get(self.TRAINS_URL + station_code + self.TRAINS_PARAMETERS)
         trains = response.json()
         diff = 0
@@ -39,9 +44,7 @@ class Dataloader:
                         continue
                     if time_table['differenceInMinutes'] > 0:
                         diff += time_table['differenceInMinutes']
-        if diff == 0:
-            # add some jitter for heat map
-            diff = 0.1
+
         return diff
 
     def calculate_total_lateness(self):
@@ -52,7 +55,10 @@ class Dataloader:
             df.at[index, 'lateness'] = lateness
 
         df.to_pickle(self.LATENESS_PATH)
+        print('total lateness calculated!')
 
     def load_total_lateness(self):
+        print('loading total lateness')
         df = pd.read_pickle(self.LATENESS_PATH)
+        print('done!')
         return df
