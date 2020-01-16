@@ -7,9 +7,10 @@ class Dataloader:
     STATIONS_URL = 'https://rata.digitraffic.fi/api/v1/metadata/stations'
     TRAINS_URL = 'https://rata.digitraffic.fi/api/v1/live-trains/station/'
     TRAINS_PARAMETERS = '?arrived_trains=10&arriving_trains=0&departed_trains=10&departing_trains=0&include_nonstopping=false'
+    LATENESS_PATH = 'data/lateness.pkl'
 
     def get_and_save_stations(self):
-        df = pd.DataFrame(columns=['stationName', 'stationShortCode', 'longitude', 'latitude'])
+        df = pd.DataFrame(columns=['stationName', 'stationShortCode', 'longitude', 'latitude', 'lateness'])
         response = requests.get(self.STATIONS_URL)
         stations = response.json()
         for s in stations:
@@ -38,5 +39,20 @@ class Dataloader:
                         continue
                     if time_table['differenceInMinutes'] > 0:
                         diff += time_table['differenceInMinutes']
-        print(diff)
+        if diff == 0:
+            # add some jitter for heat map
+            diff = 0.1
         return diff
+
+    def calculate_total_lateness(self):
+        df = self.load_stations()
+        for index, row in df.iterrows():
+            station_code = row['stationShortCode']
+            lateness = self.calculate_lateness_of_station(station_code)
+            df.at[index, 'lateness'] = lateness
+
+        df.to_pickle(self.LATENESS_PATH)
+
+    def load_total_lateness(self):
+        df = pd.read_pickle(self.LATENESS_PATH)
+        return df
