@@ -19,4 +19,3 @@ class Dataloader:
     def __init__(self):
         locations = self.load_stations()
         print(locations)
-        # miteeeeen
