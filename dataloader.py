@@ -62,3 +62,14 @@ class Dataloader:
         df = pd.read_pickle(self.LATENESS_PATH)
         print('done!')
         return df
+
+    @staticmethod
+    def convert_data_for_heat_map(data):
+        print('convert data for heat map')
+        converted = data.iloc[:, 2:5].to_numpy()
+        v = converted[:, 2]
+        converted[:, 2] = (v - v.min()) / (v.max() - v.min())
+
+        # print(converted)
+
+        return converted
